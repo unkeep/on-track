@@ -153,7 +153,7 @@ struct BudgetStat: Decodable {
 class BudgetWebService {
     static func fetchBudgetStat(callback: @escaping (Result<BudgetStat, Error>)->Void) {
         
-            guard let url = URL(string: "https://alfa-booker.herokuapp.com/budget_stat") else { return }
+            guard let url = URL(string: "https://europe-central2-ontrack-384219.cloudfunctions.net/on-track-func/api/budget_stat") else { return }
         
             var request = URLRequest(url: url)
             request.setValue("d6154016-cd46-4235-ab40-7971a6a5ced7", forHTTPHeaderField: "Auth-Token")
